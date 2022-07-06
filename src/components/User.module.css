@@ -1,0 +1,35 @@
+.main-box {
+  width: 85vw;
+  height: 100vw;
+}
+.header {
+  height: 4rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+}
+.header h1 {
+  width: 20rem;
+}
+
+.drop-dn {
+  width: 10rem;
+  color: white;
+  background-color: darkgreen;
+  border-radius: 3px;
+}
+.form {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.drop-dns {
+  width: 20rem;
+  margin-left: 2.5rem;
+  text-align: left;
+  border-radius: 3px;
+}
+.lists {
+  padding: 3rem;
+}

@@ -1,0 +1,27 @@
+[
+    {
+     
+      "item id":"1",
+      "item Name":"FCL",
+      "item category":"abc",
+      "current stock":"just one",
+      "unit":"34",
+      "price":"234",
+      "type":"buy"
+
+ 
+    },
+    {
+     
+      "item id":"2",
+      "item Name":"INDIAN OIL",
+      "item category":"abc",
+      "current stock":"just one",
+      "unit":"34",
+      "price":"234",
+      "type":"buy"
+     
+      
+    }
+   
+  ]

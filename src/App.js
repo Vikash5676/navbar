@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Navbar from "./components/navbar/Navbar";
+import User from "./components/User";
+import Dasboard from "./components/dashboard/Dasboard";
+import Inventory from "./components/Inventory";
+import OrderForm from "./components/OrderForm";
+import OrderList from "./components/OrderList";
+import Sign from "./components/signinpage/Sign";
+import CustomerOrder from "./components/customerOrderPage/CustomerOrder";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        <Navbar>
+          <Routes>
+            <Route index element={<Sign />} />
+            <Route path="/dashboard" element={<Dasboard />} />
+            <Route path="/user" element={<User />} />
+            <Route path="/inventory" element={<CustomerOrder />} />
+            <Route path="/orderform" element={<OrderForm />} />
+            <Route path="/orderlist" element={<OrderList />} />
+            <Route path="*" element={<> not found</>} />
+          </Routes>
+        </Navbar>
+      </Router>
+    </>
   );
 }
 

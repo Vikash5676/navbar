@@ -1,0 +1,9 @@
+.ag{
+    color: black;
+   background-color: white;
+}
+
+.ag:hover{
+    background-image: linear-gradient(to left, pink,pink,blue);
+    color: white;
+}
