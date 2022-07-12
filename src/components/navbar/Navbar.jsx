@@ -8,7 +8,7 @@ import { BsCartCheck } from "react-icons/bs";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import SidebarMenu from "./SidebarMenu";
-import style from "./Navbar.module.css";
+import "./Navbar.css";
 const routes = [
   {
     path: "/dashboard",
@@ -80,14 +80,15 @@ const Navbar = ({ children }) => {
         <motion.div
           animate={{
             width: isOpen ? "200px" : "45px",
-
+            height: "90vh",
             transition: {
               duration: 0.3,
               type: "tween",
               damping: 10,
+              color: "black",
+              backgroundColor: "rgba(255, 255, 255, 0.123)",
             },
           }}
-          style={{ backgroundColor: "white", color: "black" }}
         >
           <div className="top_section">
             <AnimatePresence>
@@ -145,7 +146,7 @@ const Navbar = ({ children }) => {
                   key={index}
                   // className="link"
                   activeClassName="active"
-                  className={style.ag}
+                  className="ag"
                 >
                   <div className="icon">{route.icon}</div>
                   <AnimatePresence>

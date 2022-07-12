@@ -8,6 +8,9 @@ import {
 } from "@ant-design/icons";
 import { useState } from "react";
 import { Icon } from "@iconify/react";
+import { NavLink } from "react-router-dom";
+
+const { SubMenu, Item } = Menu;
 
 const Header = () => {
   const [current, setCurrent] = useState("login");
@@ -19,32 +22,32 @@ const Header = () => {
   return (
     <div>
       <Menu mode="horizontal" selectedKeys={[current]} onClick={handleClick}>
-        <Menu.Item key="home" icon={<HomeOutlined />}>
-          Home
-        </Menu.Item>
-        <Menu.SubMenu
+        <Item key="home" icon={<HomeOutlined />}>
+          <NavLink to="/home">Home</NavLink>
+        </Item>
+        <SubMenu
           key="SubMenu"
           title="Navigation Two - Submenu"
           icon={<SettingOutlined />}
         >
-          <Menu.Item key="user" icon={<AppstoreOutlined />}>
+          <Item key="user" icon={<AppstoreOutlined />}>
             Navigation Two
-          </Menu.Item>
-        </Menu.SubMenu>
-        <Menu.Item
+          </Item>
+        </SubMenu>
+        <Item
           key="register"
           icon={<UserAddOutlined />}
           style={{ marginLeft: "55%" }}
         >
-          Register
-        </Menu.Item>
-        <Menu.Item
+          <NavLink to="/login">Register</NavLink>
+        </Item>
+        <Item
           key="login"
           icon={<Icon icon="heroicons-outline:login" />}
           className="float-end"
         >
-          Login
-        </Menu.Item>
+          <NavLink to="/login">Login</NavLink>
+        </Item>
       </Menu>
     </div>
   );

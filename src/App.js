@@ -14,8 +14,8 @@ import Header from "./components/navbar/Header";
 function App() {
   return (
     <>
-      <Header />
       <Router>
+        <Header />
         <Navbar>
           <Routes>
             <Route path="/login" element={<Sign />} />

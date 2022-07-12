@@ -41,7 +41,7 @@ const Dasboard = () => {
               style={{ fontSize: "4rem", textAlign: "center" }}
             />
             1197 <br />
-            <div style={{ color: "black", fontSize: "1rem" }}>hellow</div>
+            <div style={{ color: "black", fontSize: "1rem" }}>Orders</div>
           </div>
         </div>
         <div className={style.footer2}>
@@ -51,7 +51,7 @@ const Dasboard = () => {
               style={{ fontSize: "4rem", textAlign: "center" }}
             />
             9 <br />
-            <div style={{ color: "black", fontSize: "1rem" }}>hellow</div>
+            <div style={{ color: "black", fontSize: "1rem" }}>Customers</div>
           </div>
           <div className={style.box4}>
             <Icon
@@ -59,7 +59,7 @@ const Dasboard = () => {
               style={{ fontSize: "4rem", textAlign: "center" }}
             />
             1197 <br />
-            <div style={{ color: "black", fontSize: "1rem" }}>hellow</div>
+            <div style={{ color: "black", fontSize: "1rem" }}>Sales</div>
           </div>
         </div>
       </div>
