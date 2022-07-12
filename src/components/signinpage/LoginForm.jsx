@@ -1,4 +1,5 @@
 import React, { useContext, useState } from "react";
+import cookies from "js-cookie";
 import {
   BoldLink,
   BoxContainer,
@@ -12,7 +13,6 @@ import { AccountContext } from "./AccountContext";
 import axios from "axios";
 import config from "../config";
 import { useNavigate } from "react-router-dom";
-import Dasboard from "../dashboard/Dasboard";
 
 export function LoginForm(props) {
   const { switchToSignup } = useContext(AccountContext);
@@ -21,6 +21,7 @@ export function LoginForm(props) {
     password: "",
   });
   const [suc, setSuc] = useState(false);
+  const [User, setUser] = useState();
   const navigate = useNavigate();
   const handleChange = (e) => {
     setData({ ...data, [e.target.name]: e.target.value });
@@ -29,13 +30,14 @@ export function LoginForm(props) {
     axios
       .post(`${config.URL}/api/login`, data)
       .then((res) => {
-        console.log(res.data);
+        setUser(res.data);
         setSuc(res.data.success);
       })
       .catch((err) => {
         console.log(err);
       });
     if (suc === true) {
+      console.log(User);
       navigate("/dashboard");
     }
   };

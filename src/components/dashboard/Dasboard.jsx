@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import style from "./Dasboard.module.css";
 
 import { Layout } from "antd";
 
 import { Icon } from "@iconify/react";
+import axios, { Axios } from "axios";
 
 const Dasboard = () => {
+  useEffect(() => {
+    axios.get();
+  }, []);
+
   return (
     <Layout>
       <div className={style.mainbox}>
@@ -24,11 +29,11 @@ const Dasboard = () => {
         <div className={style.footer}>
           <div className={style.box1}>
             <Icon
-              icon="mdi:currency-rupee"
+              icon="dashicons:products"
               style={{ fontSize: "4rem", textAlign: "center" }}
             />
             11111 <br />
-            <div style={{ color: "black", fontSize: "1rem" }}>hellow</div>
+            <div style={{ color: "black", fontSize: "1rem" }}>Products</div>
           </div>
           <div className={style.box2}>
             <Icon

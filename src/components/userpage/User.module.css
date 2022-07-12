@@ -1,6 +1,9 @@
-.main-box {
-  width: 85vw;
+.mainbox {
+  width: 84vw;
   height: 100vw;
+
+  position: fixed;
+  right: 2%;
 }
 .header {
   height: 4rem;
@@ -8,11 +11,11 @@
   justify-content: space-between;
   padding: 2rem;
 }
-.header h1 {
+.hs {
   width: 20rem;
 }
 
-.drop-dn {
+.dropdn {
   width: 10rem;
   color: white;
   background-color: darkgreen;
@@ -24,7 +27,7 @@
   justify-content: space-evenly;
 }
 
-.drop-dns {
+.dropdns {
   width: 20rem;
   margin-left: 2.5rem;
   text-align: left;
@@ -32,4 +35,12 @@
 }
 .lists {
   padding: 3rem;
+}
+
+.modelinput {
+  width: 20rem;
+  margin: 10px;
+}
+.modals {
+  box-shadow: 1rem;
 }

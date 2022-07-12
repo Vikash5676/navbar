@@ -7,9 +7,9 @@
 .main-container {
   display: flex;
 }
-/* main {
+main {
   padding: 10px;
-} */
+}
 
 .title {
   font-size: 3rem;
@@ -30,7 +30,6 @@
   align-items: center;
   justify-content: space-between;
   padding: 15px 10px;
-  
 }
 .logo {
   font-size: 18px;
